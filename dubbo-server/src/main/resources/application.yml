@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: dubbo-provider-demo
+server:
+  port: 9001
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+    id: hello-provider
+  protocol:
+    port: 12345
+    name: dubbo
+    id: dubbo
+    status: server
+  application:
+    name: dubbo-provider-demo-name
+    id: dubbo-provider-demo-name-id
+    qos-enable: true
+    qos-port: 22222
+  scan:
+    basePackages: com.zp.demo.service
+
+#service info
+hello:
+  service:
+    version: 1.0.0
