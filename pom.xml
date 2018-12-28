@@ -27,6 +27,9 @@
     <modules>
         <module>dubbo-client</module>
         <module>dubbo-server</module>
+        <module>eureka-client</module>
+        <module>eureka-server</module>
+        <module>gateway</module>
     </modules>
 
     <dependencyManagement>
