@@ -5,9 +5,21 @@ spring:
     type: ehcache
   cloud:
     gateway:
+      routes:
+      - id: v1
+        uri: lb://EUREKA-CLIENT-1
+        predicates:
+        - Path=/ver/**
+        - Weight=ver_service,90
+      - id: v1
+        uri: lb://EUREKA-CLIENT-1
+        predicates:
+        - Path=/ver/**
+        - Weight=ver_service,10
       discovery:
         locator:
           enabled: true
+
 server:
   port: 80
 

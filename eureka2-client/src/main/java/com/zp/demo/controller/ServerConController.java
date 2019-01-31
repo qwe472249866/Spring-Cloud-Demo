@@ -1,5 +1,6 @@
 package com.zp.demo.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.boot.web.server.WebServer;
 import org.springframework.boot.web.servlet.context.ServletWebServerInitializedEvent;
 import org.springframework.context.ApplicationListener;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Api("ServerConController")
 @RestController
 @RequestMapping("/info")
 public class ServerConController implements ApplicationListener<ServletWebServerInitializedEvent> {
