@@ -18,9 +18,8 @@ public class WebClientConf {
 
     @Bean
     @LoadBalanced
-    public WebClient webClient(){
-
-    return  WebClient.create();
+    public WebClient webClient() {
+        return WebClient.create();
     }
 
     @Bean
