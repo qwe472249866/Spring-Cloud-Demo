@@ -1,6 +1,7 @@
 package com.zp.demo.bean;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.gateway.config.GatewayAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +19,8 @@ public class WebClientConf {
     @Bean
     @LoadBalanced
     public WebClient webClient(){
-        return  WebClient.create();
+
+    return  WebClient.create();
     }
 
     @Bean
